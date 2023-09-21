@@ -42,8 +42,19 @@
             </li>
           </ul>
         </address>
+        <button class="open-mobile-menu-btn">
+          <svg
+            class="open-mobile-menu-icon"
+            width="24"
+            height="24"
+            aria-label="mobile menu open icon"
+          >
+            <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
+
     <main>
       <section class="dark_bg">
         <div class="container">
@@ -125,12 +136,15 @@
           <h2 class="team_title">Our Team</h2>
           <ul class="place_for_cart">
             <li class="team_card">
-              <img
-                class="photo_of_team"
-                src="./images/man1.jpg"
-                alt="Mark Guerro Product Designer"
-                width="264"
-              />
+              <picture>
+                <img
+                  class="photo_of_team"
+                  src="./images/man1.jpg"
+                  alt="Mark Guerro Product Designer"
+                  width="264"
+                />
+                <source srcset="./images/man1@2x.jpg 2x" width="360" />
+              </picture>
               <div class="card_content">
                 <h3 class="name">Mark Guerrero</h3>
                 <p class="position">Product Designer</p>
@@ -165,12 +179,15 @@
               </div>
             </li>
             <li class="team_card">
-              <img
-                class="photo_of_team"
-                src="./images/man2.jpg"
-                alt="Tom Ford Frontend Developer"
-                width="264"
-              />
+              <picture>
+                <img
+                  class="photo_of_team"
+                  src="./images/man2.jpg"
+                  alt="Tom Ford Frontend Developer"
+                  width="264"
+                />
+                <source srcset="./images/man2@2x.jpg 2x" width="360" />
+              </picture>
               <div class="card_content">
                 <h3 class="name">Tom Ford</h3>
                 <p class="position">Frontend Developer</p>
@@ -205,12 +222,15 @@
               </div>
             </li>
             <li class="team_card">
-              <img
-                class="photo_of_team"
-                src="./images/woman3.jpg"
-                alt="Camila Garcia Marketing"
-                width="264"
-              />
+              <picture>
+                <img
+                  class="photo_of_team"
+                  src="./images/woman3.jpg"
+                  alt="Camila Garcia Marketing"
+                  width="264"
+                />
+                <source srcset="./images/woman3@2x.jpg 2x" width="360" />
+              </picture>
               <div class="card_content">
                 <h3 class="name">Camila Garcia</h3>
                 <p class="position">Marketing</p>
@@ -244,12 +264,15 @@
               </div>
             </li>
             <li class="team_card">
-              <img
-                class="photo_of_team"
-                src="./images/man4.jpg"
-                alt="Daniel Wilson UI Designer"
-                width="264"
-              />
+              <picture>
+                <img
+                  class="photo_of_team"
+                  src="./images/man4.jpg"
+                  alt="Daniel Wilson UI Designer"
+                  width="264"
+                />
+                <source srcset="./images/man4@2x.jpg 2x" width="360" />
+              </picture>
               <div class="card_content">
                 <h3 class="name">Daniel Wilson</h3>
                 <p class="position">UI Designer</p>
@@ -292,11 +315,14 @@
           <ul class="our_exampels">
             <li class="project_card_one">
               <div class="firs_portfolio">
-                <img
-                  src="./images/Banking_App.jpg"
-                  alt="Banking App"
-                  width="360"
-                />
+                <picture>
+                  <img
+                    src="./images/Banking_App.jpg"
+                    alt="Banking App"
+                    width="360"
+                  />
+                  <source srcset="./images/Banking_App@2x.jpg 2x" width="360" />
+                </picture>
                 <p class="paragraf_inhide">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -310,11 +336,17 @@
             </li>
             <li class="project_card_one">
               <div class="firs_portfolio">
-                <img
-                  src="./images/Cashless_Payment.jpg"
-                  alt="Cashless Payment"
-                  width="360"
-                />
+                <picture>
+                  <img
+                    src="./images/Cashless_Payment.jpg"
+                    alt="Cashless Payment"
+                    width="360"
+                  />
+                  <source
+                    srcset="./images/Cashless_Payment@2x.png 2x"
+                    width="360"
+                  />
+                </picture>
                 <p class="paragraf_inhide">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -328,11 +360,17 @@
             </li>
             <li class="project_card_one">
               <div class="firs_portfolio">
-                <img
-                  src="./images/Medidation_App.jpg"
-                  alt="Medidation App"
-                  width="360"
-                />
+                <picture>
+                  <img
+                    src="./images/Medidation_App.jpg"
+                    alt="Medidation App"
+                    width="360"
+                  />
+                  <source
+                    srcset="./images/Medidation_App@2x.png 2x"
+                    width="360"
+                  />
+                </picture>
                 <p class="paragraf_inhide">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -346,11 +384,17 @@
             </li>
             <li class="project_card_one">
               <div class="firs_portfolio">
-                <img
-                  src="./images/Taxi_Service.jpg"
-                  alt="Taxi Service"
-                  width="360"
-                />
+                <picture>
+                  <img
+                    src="./images/Taxi_Service.jpg"
+                    alt="Taxi Service"
+                    width="360"
+                  />
+                  <source
+                    srcset="./images/Taxi_Service@2x.png 2x"
+                    width="360"
+                  />
+                </picture>
                 <p class="paragraf_inhide">
                   14 Stylish and User-Friendly App Design Concepts · Task
                   Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
@@ -479,6 +523,67 @@
         </div>
       </div>
     </footer>
+    <div class="mobile-menu">
+      <button class="mobile-menu-close-btn">
+        <svg
+          class="mobile-menu-close-icon"
+          width="8"
+          height="8"
+          aria-label="mobile menu close icon"
+        >
+          <use href="./images/icons.svg#icon-close-black"></use>
+        </svg>
+      </button>
+      <nav>
+        <ul class="ul_nav_mobile">
+          <li><a class="li_nav_mobile current" href="">Studio</a></li>
+          <li><a class="li_nav_mobile current" href="">Portfolio</a></li>
+          <li><a class="li_nav_mobile current" href="">Contacts</a></li>
+        </ul>
+      </nav>
+      <address class="mobile_menu_address">
+        <ul class="mobile_ul_adress">
+          <li class="li_mobile">
+            <a
+              class="li_mobile_address current"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="li_mobile">
+            <a class="li_mobile_address current" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+        </ul>
+      </address>
+      <ul class="social_list_strick_mobile">
+        <li class="social_list_item_mobile">
+          <a class="use_group_mobile" href="#">
+            <svg class="size_social_round_mobile" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use></svg
+          ></a>
+        </li>
+        <li class="social_list_item_mobile">
+          <a class="use_group_mobile" href="#">
+            <svg class="size_social_round_mobile" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use></svg
+          ></a>
+        </li>
+        <li class="social_list_item_mobile">
+          <a class="use_group_mobile" href="#">
+            <svg class="size_social_round_mobile" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use></svg
+          ></a>
+        </li>
+        <li class="social_list_item_mobile">
+          <a class="use_group_mobile" href="#">
+            <svg class="size_social_round_mobile" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
     <div class="form">
       <div class="modal">
         <button class="close_btn" type="button">
@@ -570,16 +675,12 @@
               value="true"
               required
             />
+            <span class="review_form_own_checkbox">
+              <svg class="review_form_own_checkbox_icon" width="10" height="8">
+                <use href="./images/icons.svg#icon-tick"></use>
+              </svg>
+            </span>
             <label class="review_form_checkbox_label _byy" for="user-privacy">
-              <span class="review_form_own_checkbox">
-                <svg
-                  class="review_form_own_checkbox_icon"
-                  width="10"
-                  height="8"
-                >
-                  <use href="./images/icons.svg#icon-tick"></use>
-                </svg>
-              </span>
               I accept the terms and conditions of the&nbsp;
               <a class="review_form_privacy_link accent-color" href="#"
                 >Privacy Policy</a
