@@ -1,4 +1,4 @@
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 320px) {
   body {
     font-family: "Roboto", sans-serif;
     background-color: #fff;
@@ -60,7 +60,7 @@
   }
   .studio {
     color: var(--navyblue, #2e2f42);
-    font-family: Raleway;
+    font-family: "Raleway" sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -102,13 +102,22 @@
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 9999999;
+    z-index: 99;
     width: 100%;
     height: 100%;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
   .ul_nav_mobile {
     margin: 72px 0 0 16px;
@@ -124,10 +133,14 @@
     margin-bottom: 40px;
   }
   .mobile_menu_address {
-    margin: 168px 0 0 16px;
+    margin-top: auto;
+    margin-left: 24px;
   }
   .li_mobile {
     margin-bottom: 24px;
+  }
+  .li_mobile:last-child {
+    margin-bottom: 0;
   }
   .li_mobile_address {
     color: var(--SLATE, #434455);
@@ -146,9 +159,9 @@
   }
   .social_list_strick_mobile {
     display: flex;
-    margin: 48px 0 0 16px;
+    margin: 48px 0 40px 16px;
     align-items: center;
-    gap: 24px;
+    gap: 40px;
   }
   .social_list_item_mobile {
     display: flex;
@@ -177,10 +190,11 @@
     fill: #f4f4fd;
     flex-shrink: 0;
   }
-  .mobile-menu .is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+  .our_preferences {
+    padding: 96px 0;
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
   }
   .dark_bg {
     display: flex;
@@ -194,7 +208,7 @@
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/Dark-bg-mobile.png");
+      url("../images/Dark-bg-mobile-min.png");
     background-size: cover;
     padding-top: 72px;
     padding-bottom: 72px;
@@ -202,11 +216,13 @@
 
   @media (min-resolution: 192dpi) {
     .dark_bg {
+      background-repeat: no-repeat;
+      background-position: center;
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url("../images/Dark-bg@2x.jpg");
+        url("../images/Dark-bg-mobile@2x.jpg");
     }
   }
   .main_title {
@@ -249,12 +265,11 @@
   .visually-hidden {
     display: none;
   }
-  .ul_preferences {
-    margin-top: 96px;
-    margin-bottom: 96px;
-  }
   .feature {
     margin-bottom: 72px;
+  }
+  .feature:last-child {
+    margin-bottom: 0;
   }
   .preferences_title {
     color: var(--NAVY-BLUE, #2e2f42);
@@ -273,13 +288,17 @@
     font-style: normal;
     font-weight: 500;
     line-height: 1.5; /* 150% */
-    letter-spacing: 1.3333px;
+    letter-spacing: 0.02em;
     margin: 0;
   }
   .our_team {
     background: var(--cloud, #f4f4fd);
-    padding: 120px 28px;
+    padding: 96px 0;
     margin: 0 auto;
+    justify-content: center;
+  }
+  .team_card:last-child {
+    margin-bottom: 0;
   }
   .team_title {
     margin: 0 0 72px 0;
@@ -294,6 +313,7 @@
   }
   .place_for_cart {
     align-items: flex-start;
+
     margin: 0 auto;
     gap: 24px;
     padding: 0;
@@ -301,7 +321,6 @@
   .team_card {
     display: flex;
     width: 264px;
-    height: 428px;
     padding-bottom: 0px;
     flex-direction: column;
     justify-content: center;
@@ -318,8 +337,6 @@
     height: 260px;
   }
   .card_content {
-    display: flex;
-    width: 232px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -337,7 +354,6 @@
     font-weight: 500;
     line-height: 1.2; /* 120% */
     letter-spacing: 0.02em;
-    margin: 0;
   }
   .position {
     color: var(--SLATE, #434455);
@@ -350,7 +366,6 @@
     font-weight: 400;
     line-height: 1.5; /* 150% */
     letter-spacing: 0.013em;
-    margin: 0;
   }
   .social_list_strick {
     display: flex;
@@ -376,7 +391,7 @@
   .exampels {
     flex-shrink: 0;
     background: #fff;
-    padding: 120px 0;
+    padding: 96px 0;
     margin: 0 auto;
   }
   .title_exampels {
@@ -408,6 +423,13 @@
     padding: 0;
     margin-bottom: 0 0 48px 0;
   }
+  .firs_portfolio {
+    width: 360px;
+    height: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+  }
   .paragraf_inhide {
     display: none;
   }
@@ -416,7 +438,7 @@
     height: auto;
     overflow: hidden;
     padding: 0 auto;
-    margin: 0 auto 24px auto;
+    margin: 0 auto 48px auto;
   }
   .card_content_portfolio {
     display: flex;
@@ -428,10 +450,23 @@
     align-self: stretch;
   }
   .name_card {
+    color: var(--navyblue, #2e2f42);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-top: 0;
     margin: 0;
   }
   .text_card {
     margin: 0;
+    color: var(--slate, #434455);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   .dark_futter {
     flex-shrink: 0;
@@ -858,7 +893,16 @@
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/Dark-bg@2x.jpg);
+      url(../images/Dark-bg-tablet-min.jpg);
+  }
+  @media (min-resolution: 192dpi) {
+    .dark_bg {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/Dark-bg-tablet@2x.jpg");
+    }
   }
   .main_title {
     width: 496px;
@@ -893,7 +937,7 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .our_preferences {
-    padding: 96px 16px;
+    padding: 96px 0;
     width: auto;
     height: auto;
     flex-shrink: 0;
@@ -959,7 +1003,7 @@
     text-transform: capitalize;
   }
   .place_for_cart {
-    height: 856px;
+    height: auto;
     width: 552px;
     display: flex;
     margin: 0 auto;
@@ -976,6 +1020,37 @@
     display: flex;
     margin: 0;
     justify-content: center;
+  }
+  .photo_of_team {
+    width: 264px;
+    height: 260px;
+  }
+  .card_content {
+    padding: 32px;
+  }
+  .name {
+    color: var(--NAVY-BLUE, #2e2f42);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+  .position {
+    color: var(--SLATE, #434455);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.013em;
+    margin-top: 0;
+    margin-bottom: 8px;
   }
   .exampels {
     background: #fff;
@@ -1008,6 +1083,44 @@
   }
   .project_card_one {
     margin: 0;
+    width: 356px;
+    height: auto;
+    overflow: hidden;
+  }
+  .firs_portfolio {
+    width: 360px;
+    height: 300px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .card_content_portfolio {
+    display: flex;
+    padding: 32px 16px 32px 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+  }
+  .name_card {
+    color: var(--navyblue, #2e2f42);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-top: 0;
+    margin: 0;
+  }
+  .team_card {
+    margin: 0;
+    color: var(--slate, #434455);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   .ft_form {
     align-items: flex-start;
@@ -1018,7 +1131,9 @@
     gap: 24px;
   }
   .dark_futter {
-    height: auto;
+    padding: 96px 106px;
+    width: auto;
+    height: 456px;
     flex-shrink: 0;
   }
   .dark_href {
@@ -1039,9 +1154,9 @@
     padding: 0;
     align-items: flex-start;
     flex-wrap: wrap;
-    justify-content: center;
     column-gap: 24px;
     row-gap: 72px;
+    justify-content: space-between;
   }
   .white_studio {
     color: var(--cloud, #f4f4fd);
@@ -1992,11 +2107,12 @@
     margin: 0;
   }
   .dark_futter {
+    width: auto;
+    height: auto;
     background: var(--navyblue, #2e2f42);
     padding: 100px 0;
     margin: 0 auto;
     position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
   }
